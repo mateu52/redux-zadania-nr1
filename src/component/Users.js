@@ -10,7 +10,13 @@ function Users(){
     },[]);
 
     return(
-        <p>hello</p>
+        <div>
+            {users && users.map(user => {
+                return <div key={user.login.uuid}>
+                    <p>{user.name.first} {user.name.last}</p>
+                </div>
+            })}
+        </div>
     )
 }
 
