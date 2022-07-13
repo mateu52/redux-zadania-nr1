@@ -1,21 +1,16 @@
 import { BrowserRouter as Router , Link, Routes, Route } from "react-router-dom";
 import React from 'react';
-//import { createStore } from 'redux';
+import { createStore } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
 import Home from "./component/Home";
 import Users from "./component/Users";
 import CounterContainer from "./component/CounterContainer";
-import reducer, { inc, dec, reset } from './component/redux';
+import reducer from './component/redux';
 import { Provider } from 'react-redux';
+import rootReducer from "./rootReducer";
 
-const store = configureStore({reducer});
+const store = createStore(rootReducer);
 
-store.dispatch(inc());
-store.dispatch(inc());
-store.dispatch(inc());
-
-store.subscribe(() => console.log(store.getState()));
-console.log(store.getState());
 function App() {
   return (
     <div>

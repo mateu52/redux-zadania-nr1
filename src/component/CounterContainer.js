@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import { inc } from './redux';
 
 class CounterContainer extends Component {
-    state = {
-        count: 2
-    };
-    add = () => {
-        this.setState(prevState => ({ count: prevState.count + 1 }));
-    };
+    // state = {
+    //     count: 2
+    // };
+    // add = () => {
+    //     this.setState(prevState => ({ count: prevState.count + 1 }));
+    // };
     render(){
         console.log(this.props.counterValue);
         const { counterValue, addValue } = this.props;
@@ -23,7 +23,7 @@ class CounterContainer extends Component {
 
 function mapStateToProps(state){
     return {
-        counterValue: state.count
+        counterValue: state.counter.count
     };
 }
 
