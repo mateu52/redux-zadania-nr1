@@ -1,4 +1,6 @@
 const COUNTER_REFRESH = 'COUNTER_REFRESH';
+const COUNTER_LOAD = 'COUNTER_LOAD';
+const COUNTER_ADD = 'COUNTER_ADD';
 
 export function load() {
     return {

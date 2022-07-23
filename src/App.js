@@ -1,20 +1,27 @@
-import { BrowserRouter as Router , Link, Routes, Route } from "react-router-dom";
+//import { BrowserRouter as Router , Link, Routes, Route } from "react-router-dom";
 import React from 'react';
-import { createStore } from 'redux';
-import { configureStore } from '@reduxjs/toolkit';
-import Home from "./component/Home";
-import Users from "./component/Users";
-import CounterContainer from "./component/CounterContainer";
-import reducer from './component/redux';
-import { Provider } from 'react-redux';
-import rootReducer from "./rootReducer";
-
-const store = createStore(rootReducer);
-
+ import { createStore } from 'redux';
+ import { load } from './component/duck/actions';
+ import { configureStore } from '@reduxjs/toolkit';
+// import Home from "./component/Home";
+// import Users from "./component/Users";
+// import CounterContainer from "./component/CounterContainer";
+// import reducer from './component/redux';
+// import { Provider } from 'react-redux';
+// import rootReducer from "./rootReducer";
+//import Apptut from './tutorial/Apptut';
+import reducer from './component/duck/reducers';
+// const store = createStore(rootReducer);
+import types from './component/duck/types';
 function App() {
+  const store = configureStore({reducer});
+  store.dispatch(load());
+
+  console.log(store.getState())
   return (
     <div>
-      <Provider store={store}>
+      <p>Hello world</p>
+      {/* <Provider store={store}>
       <Router>
         <nav>
           <p>
@@ -33,7 +40,7 @@ function App() {
           <Route path="/Counter" element={<CounterContainer />} />
         </Routes>
       </Router>
-      </Provider>
+      </Provider> */}
     </div>
   );
 }
