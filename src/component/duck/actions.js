@@ -1,7 +1,7 @@
 const COUNTER_REFRESH = 'COUNTER_REFRESH';
 const COUNTER_LOAD = 'COUNTER_LOAD';
 const COUNTER_ADD = 'COUNTER_ADD';
-
+const COUNTER_RESET = 'COUNTER_RESET';
 export function load() {
     return {
         type: COUNTER_LOAD
@@ -15,6 +15,11 @@ export function refresh() {
 export function add() {
     return {
         type: COUNTER_ADD
+    }
+}
+export function reset() {
+    return {
+        type: COUNTER_RESET
     }
 }
 
