@@ -1,5 +1,5 @@
 import React from 'react';
-import ApiLoad from './api';
+import ApiLoad from '../../api';
 
 function Home() {
     const hLoad = () => {

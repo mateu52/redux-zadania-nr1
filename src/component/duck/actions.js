@@ -1,28 +1,29 @@
-const COUNTER_REFRESH = 'COUNTER_REFRESH';
-const COUNTER_LOAD = 'COUNTER_LOAD';
-const COUNTER_ADD = 'COUNTER_ADD';
-const COUNTER_RESET = 'COUNTER_RESET';
-export function load() {
-    return {
-        type: COUNTER_LOAD
-    }
-}
-export function refresh() {
-    return {
-        type: COUNTER_REFRESH
-    }
-}
-export function add() {
-    return {
-        type: COUNTER_ADD
-    }
-}
-export function reset() {
-    return {
-        type: COUNTER_RESET
-    }
-}
+import types from "./types";
 
+const load = user =>{
+    return {
+        type: types.COUNTER_LOAD, user
+    }
+}
+const refresh = user => ({
+    
+        type: types.COUNTER_REFRESH, user
+    
+})
+const add = user => ({
+
+        type: types.COUNTER_ADD, user
+
+})
+const reset = user => ({
+    
+        type: types.COUNTER_RESET, user
+    
+})
+const def = {
+    load, add, reset, refresh
+}
+export default def;  
 // const COUNTER_INC = 'COUNTER_INC';
 // const COUNTER_DEC = 'COUNTER_DEC';
 // const COUNTER_RESET = 'COUNTER_RESET';

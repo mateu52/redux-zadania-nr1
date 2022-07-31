@@ -7,7 +7,7 @@ const INITIAL_STATE = {
     ]
 }
 
-const movies = (state = INITIAL_STATE, action) =>{
+const movies = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case types.RESET_M:
             return {

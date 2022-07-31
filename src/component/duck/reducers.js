@@ -1,22 +1,22 @@
 
 //import ApiLoad from '../api';
 import types from "./types";
-import React, { useState, useEffect } from 'react';
+//import { useState, useEffect } from 'react';
 
 //const [ users, setUsers ] = useState(ApiLoad());
 //setUsers(ApiLoad());
 //console.log({users})
-function ApiLoad(){
-    const [users, setUsers] = useState([]);
+// function ApiLoad(){
+//     const [users, setUsers] = useState([]);
 
     
-    useEffect(()=>{
-        fetch('https://randomuser.me/api/?results=10')
-        .then((response) => response.json())
-        .then((data) => setUsers(data.results));
-    },[]);
-    console.log({users})
-}
+//     useEffect(()=>{
+//         fetch('https://randomuser.me/api/?results=10')
+//         .then((response) => response.json())
+//         .then((data) => setUsers(data.results));
+//     },[]);
+//     console.log({users})
+// }
 
 const INITIAL_STATE = {
     users: [ 'Jan A', 'Jan B' ]
@@ -41,7 +41,7 @@ const reducer = ( state = INITIAL_STATE, action ) => {
     }
 }
 
-export default reducer
+export default reducer;
 
 
 
