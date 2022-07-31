@@ -32,7 +32,7 @@ const reducer = ( state = INITIAL_STATE, action ) => {
             return {
                 ...state, users: []
             }
-        case 'ADD':
+        case types.COUNTER_ADD:
             return {
                 ...state, users: [...state.users, action.user]
             }

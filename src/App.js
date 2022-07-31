@@ -19,16 +19,20 @@ import React from 'react';
 //import { userReducer } from './component/duck';
 //import reducer from './component/duck';
 //import { userActions } from './component/duck'
+//import store from './store';
+import UsersContainer from './component/duck/components/UsersContainer';
 function App() {
   //const store = createStore({rootReducer},{ composeWithDevTools });
-  // store.dispatch(users.COUNTER_LOAD)
+  //store.dispatch(userActions.add('Jannn1222'))
   
   
   // console.log(store.getState())
 
   return (
     <div>
-      <p>Hello world</p>
+      
+        <UsersContainer />
+      
       
       {/* <Provider store={store}>
       <Router>
