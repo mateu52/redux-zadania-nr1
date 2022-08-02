@@ -21,6 +21,7 @@ import React from 'react';
 //import { userActions } from './component/duck'
 //import store from './store';
 import UsersContainer from './component/duck/components/UsersContainer';
+import UsersForm from './component/duck/components/UsersForm';
 function App() {
   //const store = createStore({rootReducer},{ composeWithDevTools });
   //store.dispatch(userActions.add('Jannn1222'))
@@ -32,7 +33,7 @@ function App() {
     <div>
       
         <UsersContainer />
-      
+        <UsersForm />
       
       {/* <Provider store={store}>
       <Router>
